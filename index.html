@@ -5,11 +5,107 @@
     <meta name="viewport" content="width=device-width">
     <title>Astronauts</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
+    <script>
+window.addEventListener("load", function() {
+      console.log('window loaded');
+      fetch("https://handlers.education.launchcode.org/static/astronauts.json").then(function(response) {
+        response.json().then( function(json) {
+          const conatiner = document.getElementById("container")
+          function name(a){
+          let name = (`Name: ${json[a].firstName} ${json[a].lastName}`)
+                  return(name)}
+                  console.log(name(1))
+                  container.addEventListener("load", function name(a){
+          let name = (`Name: ${json[a].firstName} ${json[a].lastName}`)
+                  return(name)})
+                  container.innerHTML = `
+              <div>
+               <h3>Name: ${json[0].firstName} ${json[0].lastName}</h3>
+               <ul>
+                <li> Hours in space: ${json[0].hoursInSpace}</li>
+                <li> Active: ${json[0].active}</li>
+                <li> Skills: ${json[0].skills}</li>
+                </ul>
+               <img src=${json[0].picture} height=250></img>
+            </div>
+         
+         
+              <div>
+               <h3>Name: ${json[1].firstName} ${json[1].lastName}</h3>
+               <ul>
+                <li> Hours in space: ${json[1].hoursInSpace}</li>
+                <li> Active: ${json[1].active}</li>
+                <li> Skills: ${json[1].skills}</li>
+                </ul>
+               <img src=${json[1].picture} height=250></img>
+            </div>
+            <div>
+               <h3>Name: ${json[1].firstName} ${json[2].lastName}</h3>
+               <ul>
+                <li> Hours in space: ${json[2].hoursInSpace}</li>
+                <li> Active: ${json[2].active}</li>
+                <li> Skills: ${json[2].skills}</li>
+                </ul>
+               <img src=${json[2].picture} height=250></img>
+            </div>
+            <div>
+               <h3>Name: ${json[3].firstName} ${json[3].lastName}</h3>
+               <ul>
+                <li> Hours in space: ${json[3].hoursInSpace}</li>
+                <li> Active: ${json[3].active}</li>
+                <li> Skills: ${json[3].skills}</li>
+                </ul>
+               <img src=${json[3].picture} height=250></img>
+            </div>
+            <div>
+               <h3>Name: ${json[4].firstName} ${json[4].lastName}</h3>
+               <ul>
+                <li> Hours in space: ${json[4].hoursInSpace}</li>
+                <li> Active: ${json[4].active}</li>
+                <li> Skills: ${json[4].skills}</li>
+                </ul>
+               <img src=${json[4].picture} height=250></img>
+            </div>
+            <div>
+               <h3>Name: ${json[5].firstName} ${json[5].lastName}</h3>
+               <ul>
+                <li> Hours in space: ${json[5].hoursInSpace}</li>
+                <li> Active: ${json[5].active}</li>
+                <li> Skills: ${json[5].skills}</li>
+                </ul>
+               <img src=${json[5].picture} height=250></img>
+            </div>
+            <div>
+               <h3>Name: ${json[6].firstName} ${json[6].lastName}</h3>
+               <ul>
+                <li> Hours in space: ${json[6].hoursInSpace}</li>
+                <li> Active: ${json[6].active}</li>
+                <li> Skills: ${json[6].skills}</li>
+                </ul>
+               <img src=${json[6].picture} height=250></img>
+            </div>
+          
+         `;
+         index= (index+1) % json.length;
+                  
+                })
+              });
+          });
+          
+        
+    </script>
+    </head>
+  <body
+  >
     <script src="script.js"></script>
     <h1>Astronauts</h1>
+    
     <div id="container">
+      <div class="astronaut">
+        <div class="bio"> 
+         
+
+     </div>
         <!-- List of astronauts will be added here dynamically -->
     </div>
   </body>
