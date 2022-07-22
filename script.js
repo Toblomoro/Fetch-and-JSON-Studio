@@ -10,10 +10,13 @@
                 
                 container.addEventListener("load", function name(a){
         let name = (`Name: ${json[a].firstName} ${json[a].lastName}`)
-                return(name)})
+                return(name)});
                 for (let i = 0; i < json.length; i++) {
-                container.innerHTML = `
-            <div class="astronaut">
+  
+                  console.log(json[i]);
+                
+             container.innerHTML = `
+          <div class="astronaut">
              <h3 >Name: ${json[0].firstName} ${json[0].lastName}</h3>
              <ul>
               <li> Hours in space: ${json[0].hoursInSpace}</li>
@@ -32,7 +35,7 @@
               <img class="avatar" src=${json[1].picture} ></img>
           </div>
           <div class="astronaut">
-             <h3>Name: ${json[1].firstName} ${json[2].lastName}</h3>
+             <h3>Name: ${json[2].firstName} ${json[2].lastName}</h3>
              <ul>
               <li> Hours in space: ${json[2].hoursInSpace}</li>
               <li> Active: ${json[2].active}</li>
@@ -76,8 +79,10 @@
               </ul>
              <img class="avatar" src=${json[6].picture} ></img>
           </div>
-          `;
-        }
-              })
-            });
-        }); 
+           `;
+                }
+                })
+        })
+      })
+            
+       
